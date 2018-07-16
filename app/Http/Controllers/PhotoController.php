@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use App\Models\Photo;
 
 class PhotoController extends AppBaseController
 {
@@ -139,20 +140,21 @@ class PhotoController extends AppBaseController
     public function destroy($id)
     {
         $photo = $this->photoRepository->findWithoutFail($id);
-
+        
         if (empty($photo)) {
             Flash::error('Photo not found');
 
             return redirect(route('photos.index'));
         }
 
+        $file = Photo::where('id', $id)->first();
+        unlink(public_path('img/').$file->path);
         $this->photoRepository->delete($id);
 
         Flash::success('Photo deleted successfully.');
 
         return redirect(route('photos.index'));
     }
-
 
     public function upload(Request $request)
     {
