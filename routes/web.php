@@ -11,11 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', 'FrontendController@index');
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index');
+
+Route::resource('blocks', 'BlockController');
+Route::get('/blocks/show_texts/{id}', 'BTextController@show_texts')->name('show_texts');
+Route::get('/btexts/add_text/{id}', 'BTextController@create')->name('add_text');
+Route::post('/btexts/store_text/{id}', 'BTextController@store')->name('store_text');
+Route::post('/btexts/delete_text/{id}/{block_id}', 'BTextController@destroy')->name('delete_text');
+Route::get('/btexts/edit_text/{id}/{block_id}', 'BTextController@edit')->name('edit_text');
+Route::post('/btexts/update_text/{id}/{block_id}', 'BTextController@update')->name('update_text');
+
+Route::resource('bTexts', 'BTextController');
