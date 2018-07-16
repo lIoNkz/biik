@@ -18,7 +18,7 @@
                 <a class="nav-item nav-link" href="#location">Расположение</a>
                 <a class="nav-item nav-link" href="#contact">Контакты</a>
                 <span class="divider"></span>
-                <span class="nav-info">+7 777 777 7777</span>
+                <span class="nav-info">{{ $block21->texts->first()->text }}</span>
             </div>
         </div>
     </nav>
@@ -48,7 +48,7 @@
                 <div class="hero__inner-wrapper align-bottom">
                     <div class="col-xl-5 col-lg-5 col-md-7">
                         <div class="hero__caption has-dark-background">
-                            <h1>Жилой комплекс БИІК</h1>
+                            <h1>{{ $block1->title }}</h1>
                             <!-- <form class="form">
                                 <div class="form-group">
                                     <label for="form-hero-email">Subscribe for the latest news!</label>
@@ -66,9 +66,9 @@
                             </form> -->
                             <hr>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet lorem lobortis est rutrum ullamcorper.
+                               {{ $block1->texts->find(10)->text }}
                             </p>
-                            <a href="index2.html#features" class="btn btn-primary btn-framed">Перейти</a>
+                            <a href="index2.html#features" class="btn btn-primary btn-framed">{{ $block1->texts->find(12)->text }}</a>
                         </div>
                     </div>
                     <div class="slider-nav"></div>

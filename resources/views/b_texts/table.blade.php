@@ -1,6 +1,7 @@
 <table class="table table-responsive" id="bTexts-table">
     <thead>
         <tr>
+            <th>Id</th>
             <th>Text</th>
         <th>Textable Id</th>
             <th colspan="3">Action</th>
@@ -9,6 +10,7 @@
     <tbody>
     @foreach($bTexts as $bText)
         <tr>
+            <td>{!! $bText->id !!}</td>
             <td>{!! $bText->text !!}</td>
             <td>{!! $bText->textable_id !!}</td>
             <td>
