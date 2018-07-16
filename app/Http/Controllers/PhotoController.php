@@ -162,9 +162,6 @@ class PhotoController extends AppBaseController
         $input = $request->all(); 
 
         for($i = 0; $i < count($input['photos']); $i++) {
-            
-            $input['photoable_id'] = '99999';
-            $input['size'] = 'test';
 
 
             $image = $request->file('photos')[$i];
