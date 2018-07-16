@@ -25,3 +25,6 @@ Route::get('/btexts/edit_text/{id}/{block_id}', 'BTextController@edit')->name('e
 Route::post('/btexts/update_text/{id}/{block_id}', 'BTextController@update')->name('update_text');
 
 Route::resource('bTexts', 'BTextController');
+
+Route::resource('photos', 'PhotoController');
+Route::post('/uploadphoto/gallery/images', 'PhotoController@upload')->name('upload');

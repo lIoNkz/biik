@@ -27,15 +27,11 @@
         <div class="background-wrapper" data-parallax="scroll" data-parallax-speed="3">
             <div class="background">
                 <div class="owl-carousel hero__slider parallax-element" data-owl-items="1" data-owl-autoplay="1" data-owl-dots="0" data-owl-nav="1" data-owl-loop="1" data-owl-fadeout="1" data-owl-nav-container=".slider-nav">
+                    @foreach($slider1 as $slide)
                     <div class="slide img-into-bg">
-                        <img src="/img/slide-01.jpg" alt="">
+                        <img src="/img/{{ $slide->path }}" alt="{{ $slide->alt }}">
                     </div>
-                    <div class="slide img-into-bg">
-                        <img src="/img/slide-02.jpg" alt="">
-                    </div>
-                    <div class="slide img-into-bg">
-                        <img src="/img/slide-03.jpg" alt="">
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

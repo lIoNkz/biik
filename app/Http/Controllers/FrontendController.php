@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\BText;
 use App\Models\Block;
+use App\Models\Photo;
 
 class FrontendController extends Controller
 {
@@ -36,6 +37,11 @@ class FrontendController extends Controller
 
 
 
+    	$slider1 = Photo::where('alt', 'mainSlider')->get();
+    	$slider2 = Photo::where('alt', 'youGet1')->get();
+    	$slider3 = Photo::where('alt', 'youGet2')->get();
+    	$slider4 = Photo::where('alt', 'youGet3')->get(); 
+    	$slider5 = Photo::where('alt', 'gallery')->get(); 
 
 
 
@@ -51,7 +57,11 @@ class FrontendController extends Controller
 
 
 
-    	return view('frontend.index')->with([
+
+
+
+
+    	return view('frontend.index', compact('slider1', 'slider2', 'slider3', 'slider4', 'slider5'))->with([
     		'block1' => $block1,
     		'block2' => $block2,
     		'block3' => $block3,

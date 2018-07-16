@@ -327,43 +327,13 @@
         </div>
         <!--end container-->
         <div class="owl-carousel carousel-gallery" data-owl-items="5" data-owl-dots="1" data-owl-nav="0">
-
-            <a href="/img/gallery-01.jpg" class="carousel-gallery__image popup-image">
+        @foreach($slider5 as $slide)
+            <a href="/img/{{ $slide->path }}" class="carousel-gallery__image popup-image">
                 <div class="img-into-bg">
-                    <img src="/img/gallery-01.jpg" alt="">
+                    <img src="/img/{{ $slide->path }}">
                 </div>
             </a>
-            <a href="/img/gallery-02.jpg" class="carousel-gallery__image popup-image">
-                <div class="img-into-bg">
-                    <img src="/img/gallery-02.jpg" alt="">
-                </div>
-            </a>
-            <a href="/img/gallery-03.jpg" class="carousel-gallery__image popup-image">
-                <div class="img-into-bg">
-                    <img src="/img/gallery-03.jpg" alt="">
-                </div>
-            </a>
-            <a href="/img/gallery-04.jpg" class="carousel-gallery__image popup-image">
-                <div class="img-into-bg">
-                    <img src="/img/gallery-04.jpg" alt="">
-                </div>
-            </a>
-            <a href="/img/gallery-05.jpg" class="carousel-gallery__image popup-image">
-                <div class="img-into-bg">
-                    <img src="/img/gallery-05.jpg" alt="">
-                </div>
-            </a>
-            <a href="/img/image-04.jpg" class="carousel-gallery__image popup-image">
-                <div class="img-into-bg">
-                    <img src="/img/image-04.jpg" alt="">
-                </div>
-            </a>
-            <a href="/img/image-03.jpg" class="carousel-gallery__image popup-image">
-                <div class="img-into-bg">
-                    <img src="/img/image-03.jpg" alt="">
-                </div>
-            </a>
-
+        @endforeach
         </div>
         <div class="background-wrapper">
             <div class="background background--image background--repeat-repeat opacity-50">
@@ -554,15 +524,11 @@
                     <h2>{{ $block2->title }}</h2>
                 </div>
                 <div class="owl-carousel modal__carousel" data-owl-items="1" data-owl-autoplay="1" data-owl-dots="0" data-owl-nav="0" data-owl-loop="1">
+                    @foreach($slider2 as $slide)
                     <div class="slide img-into-bg">
-                        <img src="/img/slide-01.jpg" alt="">
+                        <img src="/img/{{ $slide->path }}">
                     </div>
-                    <div class="slide img-into-bg">
-                        <img src="/img/slide-02.jpg" alt="">
-                    </div>
-                    <div class="slide img-into-bg">
-                        <img src="/img/slide-03.jpg" alt="">
-                    </div>
+                    @endforeach
                 </div>
                 <!--end modal__slider-->
             </div>
@@ -624,15 +590,12 @@
                     <h2>{{ $block3->title }}</h2>
                 </div>
                 <div class="owl-carousel modal__carousel" data-owl-items="1" data-owl-autoplay="1" data-owl-dots="0" data-owl-nav="0" data-owl-loop="1">
+                    
+                    @foreach($slider3 as $slide)
                     <div class="slide img-into-bg">
-                        <img src="/img/slide-01.jpg" alt="">
+                        <img src="/img/{{ $slide->path }}">
                     </div>
-                    <div class="slide img-into-bg">
-                        <img src="/img/slide-02.jpg" alt="">
-                    </div>
-                    <div class="slide img-into-bg">
-                        <img src="/img/slide-03.jpg" alt="">
-                    </div>
+                    @endforeach
                 </div>
                 <!--end modal__slider-->
             </div>
@@ -694,15 +657,11 @@
                     <h2>{{ $block4->title }}</h2>
                 </div>
                 <div class="owl-carousel modal__carousel" data-owl-items="1" data-owl-autoplay="1" data-owl-dots="0" data-owl-nav="0" data-owl-loop="1">
+                    @foreach($slider4 as $slide)
                     <div class="slide img-into-bg">
-                        <img src="/img/slide-01.jpg" alt="">
+                        <img src="/img/{{ $slide->path }}">
                     </div>
-                    <div class="slide img-into-bg">
-                        <img src="/img/slide-02.jpg" alt="">
-                    </div>
-                    <div class="slide img-into-bg">
-                        <img src="/img/slide-03.jpg" alt="">
-                    </div>
+                    @endforeach
                 </div>
                 <!--end modal__slider-->
             </div>
