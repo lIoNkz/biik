@@ -28,7 +28,7 @@
                             <div class="box__wrapper">
                                 <div class="box__header">
                                     <div class="box__image img-into-bg">
-                                        <img src="/img/image-01.jpg" alt="">
+                                        <img src="/img/{!! $block2->texts->find(54)->text !!}" alt="">
                                     </div>
                                 </div>
                                 <div class="box__content">
@@ -47,7 +47,7 @@
                             <div class="box__wrapper">
                                 <div class="box__header">
                                     <div class="box__image img-into-bg">
-                                        <img src="/img/image-02.jpg" alt="">
+                                        <img src="/img/{!! $block3->texts->find(55)->text !!}" alt="">
                                     </div>
                                 </div>
                                 <div class="box__content">
@@ -66,7 +66,7 @@
                             <div class="box__wrapper">
                                 <div class="box__header">
                                     <div class="box__image img-into-bg">
-                                        <img src="/img/image-03.jpg" alt="">
+                                        <img src="/img/{!! $block4->texts->find(56)->text !!}" alt="">
                                     </div>
                                 </div>
                                 <div class="box__content">
@@ -105,14 +105,13 @@
                         <div class="text-align-right push-down">
                             <h2 data-scroll-reveal="enter left and move 10px">{{ $block5->title }}</h2>
                             <p data-scroll-reveal="enter left and move 10px after 0.1s">
-                                Fusce pretium dui quis est pretium lobortis. Vestibulum eu ex sed nibh
-                                condimentum tristique eu finibus lorem. Nullam sed eleifend massa. Morbi nulla turpis, pharetra et
+                                {!! $block5->texts->find(19)->text !!}
                             </p>
-                            <a href="index2.html#contact" class="btn btn-primary btn-framed">Свяжитесь с нами</a>
+                            <a href="index2.html#contact" class="btn btn-primary btn-framed">{!! $block5->texts->find(20)->text !!}</a>
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <img class="width-100 shadow rounded-corners" src="/img/image-04.jpg" alt="">
+                        <img class="width-100 shadow rounded-corners" src="/img/{!! $block5->texts->find(57)->text !!}" alt="">
                     </div>
                 </div>
                 <!--end row-->
@@ -136,8 +135,8 @@
             <div class="block__wrapper">
                 <blockquote class="blockquote text-center">
                     <i class="fa fa-quote-left"></i>
-                    <p>Cras nisl lacus, tincidunt vitae neque vitae, interdum iaculis tortor. Orci varius natoque penatibus et magnis dis parturient montes</p>
-                    <footer class="blockquote-footer">Джон Доу</footer>
+                    <p>{!! $block6->texts->find(21)->text !!}</p>
+                    <footer class="blockquote-footer">{!! $block6->texts->find(22)->text !!}</footer>
                 </blockquote>
                 <!--end blockquote-->
             </div>
@@ -146,7 +145,7 @@
         <!--end container-->
         <div class="background-wrapper" data-parallax="scroll" data-parallax-speed="3" data-background-color="#f1f1f1">
             <div class="background--image opacity-10 parallax-element">
-                <img src="/img/slide-02.jpg" alt="">
+                <img src="/img/{!! $block6->texts->find(58)->text !!}" alt="">
             </div>
         </div>
         <!--end background-->
@@ -165,7 +164,7 @@
 
                 <div class="row">
                     <div class="col-md-5">
-                        <img src="/img/image-05.jpg" class="width-100 shadow rounded-corners" alt="">
+                        <img src="/img/{!! $block17->texts->find(59)->text !!}" class="width-100 shadow rounded-corners" alt="">
                     </div>
                     <div class="col-md-6">
                         <ul class="list list--text list--dashed">
@@ -229,7 +228,7 @@
                             <div class="box__wrapper">
                                 <div class="box__image height-300px">
                                     <div class="img-into-bg">
-                                        <img src="/img/gallery-03.jpg" alt="">
+                                        <img src="/img/{{ $block10->texts->find(60)->text }}" alt="">
                                     </div>
                                 </div>
                                 <div class="box__header">
@@ -256,7 +255,7 @@
                             <div class="box__wrapper">
                                 <div class="box__image height-300px">
                                     <div class="img-into-bg">
-                                        <img src="/img/gallery-02.jpg" alt="">
+                                        <img src="/img/{{ $block11->texts->find(61)->text }}" alt="">
                                     </div>
                                 </div>
                                 <div class="box__header">
@@ -283,7 +282,7 @@
                             <div class="box__wrapper">
                                 <div class="box__image height-300px">
                                     <div class="img-into-bg">
-                                        <img src="/img/gallery-05.jpg" alt="">
+                                        <img src="/img/{{ $block12->texts->find(62)->text }}" alt="">
                                     </div>
                                 </div>
                                 <div class="box__header">
@@ -386,24 +385,24 @@
         <div class="container">
             <div class="block__wrapper">
                 <div class="block_title text-center">
-                    <h2>Партнеры</h2>
+                    <h2>{{ $block20->title }}</h2>
                 </div>
                 <!--end block__title-->
                 <div class="d-flex align-items-center justify-content-around">
                     <a href="index2.html#">
-                        <img src="/img/partner-1.png" alt="">
+                        <img src="/img/{{ $block20->texts->find(63)->text }}" alt="">
                     </a>
                     <a href="index2.html#">
-                        <img src="/img/partner-2.png" alt="">
+                        <img src="/img/{{ $block20->texts->find(64)->text }}" alt="">
                     </a>
                     <a href="index2.html#">
-                        <img src="/img/partner-3.png" alt="">
+                        <img src="/img/{{ $block20->texts->find(65)->text }}" alt="">
                     </a>
                     <a href="index2.html#">
-                        <img src="/img/partner-4.png" alt="">
+                        <img src="/img/{{ $block20->texts->find(66)->text }}" alt="">
                     </a>
                     <a href="index2.html#">
-                        <img src="/img/partner-5.png" alt="">
+                        <img src="/img/{{ $block20->texts->find(67)->text }}" alt="">
                     </a>
                 </div>
                 <!--end logos-->
@@ -427,7 +426,7 @@
                         <div class="person">
                             <div class="person__image">
                                 <div class="img-into-bg">
-                                    <img src="/img/author-01.jpg" alt="">
+                                    <img src="/img/{{ $block15->texts->find(68)->text }}" alt="">
                                 </div>
                             </div>
                             <div class="person__description">

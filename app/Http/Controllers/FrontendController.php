@@ -32,7 +32,8 @@ class FrontendController extends Controller
     	$block18 = Block::where('id', 18)->with('texts')->first(); 
     	$block19 = Block::where('id', 19)->with('texts')->first(); 
     	$block20 = Block::where('id', 20)->with('texts')->first(); 
-    	$block21 = Block::where('id', 21)->with('texts')->first(); 
+        $block21 = Block::where('id', 21)->with('texts')->first();
+        $block23 = Block::where('id', 23)->with('texts')->first();
 
 
 
@@ -82,7 +83,8 @@ class FrontendController extends Controller
     		'block18' => $block18,
     		'block19' => $block19,
     		'block20' => $block20,
-    		'block21' => $block21
+            'block21' => $block21,
+    		'block23' => $block23
     	]);
     }
 }
